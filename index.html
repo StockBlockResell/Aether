@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Shell | Invest in the Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --accent-teal: #00f2ff;
+            --accent-gold: #ffcc33;
+            --card-bg: #0a1019;
+            --text-main: #e0e6ed;
+            --grid-color: rgba(0, 242, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            border-bottom: 1px solid var(--accent-teal);
+        }
+
+        .logo-placeholder {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 10px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .logo-sub {
+            color: var(--accent-teal);
+            letter-spacing: 15px;
+            font-size: 1.2rem;
+            margin-top: -10px;
+            display: block;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+
+        .tagline span { color: #ff4d4d; } /* Red for walk, breathe, exist */
+
+        /* Problem Section */
+        .problem-container {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-left: 4px solid var(--accent-teal);
+            margin-bottom: 20px;
+        }
+
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent-teal);
+            display: block;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+        }
+
+        .team-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+        }
+
+        .initials-circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--accent-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-family: 'Orbitron';
+            color: var(--accent-teal);
+        }
+
+        .role { color: var(--accent-teal); font-size: 0.8rem; margin-bottom: 15px; }
+        .job-desc { font-size: 0.85rem; opacity: 0.8; text-align: left; }
+
+        /* Purpose Section */
+        .purpose {
+            background: rgba(0, 242, 255, 0.02);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .gold-text { color: var(--accent-gold); font-family: 'Orbitron'; }
+
+        .cta-button {
+            display: inline-block;
+            border: 1px solid var(--accent-teal);
+            color: var(--accent-teal);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-family: 'Orbitron';
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-teal);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="logo-placeholder">AETHER</div>
+        <span class="logo-sub">SHELL</span>
+        <p class="tagline">Your phone charges while you <span>walk</span>, <span>breathe</span>, and <span>exist</span>.</p>
+        <p style="font-size: 0.9rem; opacity: 0.6;">Adrian Jauregui • Oscar Hernandez • Junior Romero</p>
+    </header>
+
+    <section class="problem-container">
+        <div>
+            <h2 style="font-family: Orbitron;">Who We Are</h2>
+            <p style="line-height: 1.8; opacity: 0.9;">Our company believes in eliminating the stress and anxiety caused by forgetting your charger or forgetting to charge your phone can also eliminate sleep disruption. Our product is meant to be sustainable to the environment, and reduce harm and more waste.</p>
+            <blockquote style="border-left: 2px solid var(--accent-gold); padding-left: 20px; color: var(--accent-gold); font-style: italic;">
+                "Turn your daily activities into energy"
+            </blockquote>
+        </div>
+        <div>
+            <div class="stat-card">
+                <span class="stat-value">90%</span>
+                <p>Teens reported phone anxiety from low battery</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">≈$16.65B</span>
+                <p>Portable charger market size in 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
+        <h2 style="font-family: Orbitron; text-align: center;">The Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="initials-circle">AJ</div>
+                <h3 style="margin: 0;">Adrian Jauregui</h3>
+                <p class="role">Founder</p>
+                <div class="job-desc">
+                    • Clear product vision<br>
+                    • Manages company relationships
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="initials-circle">OH</div>
+                <h3 style="margin: 0;">Oscar Hernandez</h3>
+                <p class="role">CMO</p>
+                <div class="job-desc">
+                    • Runs social media platforms<br>
+                    • Ad campaigns
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="initials-circle">JR</div>
+                <h3 style="margin: 0;">Junior Romero</h3>
+                <p class="role">CFO</p>
+                <div class="job-desc">
+                    • Track costs, margins & revenue
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="purpose">
+        <h2 style="font-family: Orbitron;">5% of sales goes to</h2>
+        <h1 class="gold-text" style="font-size: 3rem; margin: 10px 0;">Cancer Research.</h1>
+        <p>Aether Shell donates 5% of every sale to St. Jude Children's Research Hospital.</p>
+        <a href="#" class="cta-button">Invest in Aether Shell</a>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; font-size: 0.7rem; opacity: 0.4;">
+        © 2026 AETHER SHELL LLC | ONLINE ONLY
+    </footer>
+
+</body>
+</html>
