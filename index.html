@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER SHELL | Kinetic Charging</title>
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --accent-cyan: #00e5ff;
+            --accent-gold: #ffcc33;
+            --card-blue: #0a1929;
+            --grid-line: rgba(0, 229, 255, 0.07);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 50px 50px;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 100px;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* HERO & LOGO */
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-img {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.5));
+            margin-bottom: 20px;
+        }
+
+        .tagline { font-size: 1.5rem; letter-spacing: 1px; }
+        .tagline span { color: #ff3e3e; font-weight: bold; }
+
+        /* PRODUCT GALLERY */
+        .showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .showcase-card {
+            background: #050505;
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-cyan);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .label {
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-cyan);
+            font-weight: bold;
+            background: rgba(0, 229, 255, 0.05);
+        }
+
+        /* SECTION TITLES */
+        h2.section-head {
+            color: var(--accent-cyan);
+            border-bottom: 2px solid var(--accent-cyan);
+            display: inline-block;
+            margin: 80px 0 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* BUSINESS TABLE */
+        .table-wrap { overflow-x: auto; margin-top: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-blue);
+        }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { color: var(--accent-cyan); font-size: 0.8rem; }
+        .total { background: rgba(0, 229, 255, 0.15); color: var(--accent-gold); font-weight: bold; }
+
+        .margin-box {
+            border: 2px solid var(--accent-gold);
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+            font-size: 1.3rem;
+        }
+
+        /* CTA */
+        .cta-section { text-align: center; margin-top: 100px; }
+        .invest-btn {
+            background: transparent;
+            color: var(--accent-cyan);
+            border: 2px solid var(--accent-cyan);
+            padding: 25px 60px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            letter-spacing: 2px;
+        }
+        .invest-btn:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 50px var(--accent-cyan);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Hero with New Logo -->
+    <section class="hero">
+        <img src="https://i.imgur.com/Ud6KUM3.jpeg" alt="Aether Shell Logo" class="logo-img">
+        <p class="tagline">Your phone charges while you <span>walk, breathe,</span> and <span>exist.</span></p>
+    </section>
+
+    <!-- Product Showcase -->
+    <h2 class="section-head">The Hardware</h2>
+    <div class="showcase">
+        <div class="showcase-card">
+            <img src="https://i.imgur.com/qtbm7i5.png" alt="Aether Shell iPhone">
+            <div class="label">iPhone Edition</div>
+        </div>
+        <div class="showcase-card">
+            <img src="https://i.imgur.com/0ou8Kct.jpeg" alt="Aether Shell Android">
+            <div class="label">Android Edition</div>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <h2 class="section-head">Market Need</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div style="background: var(--card-blue); padding: 40px; border-left: 5px solid var(--accent-cyan);">
+            <h1 style="font-size: 4rem; margin: 0;">90%</h1>
+            <p>Teens suffering from phone battery anxiety[span_0](start_span)[span_0](end_span).</p>
+        </div>
+        <div style="background: var(--card-blue); padding: 40px; border-left: 5px solid var(--accent-cyan);">
+            <h1 style="font-size: 4rem; margin: 0;">$16.6B</h1>
+            <p>Portable charger market size by 2025.</p>
+        </div>
+    </div>
+
+    <!-- Financials -->
+    <h2 class="section-head">Financial Model</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>PART</th>
+                    <th>SOURCE</th>
+                    <th>COST</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Micro Kinetic Rotor</td><td>Lixin Industry</td><td>$6</td></tr>
+                <tr><td>Cooling Tech</td><td>TEC Suppliers</td><td>$5</td></tr>
+                <tr><td>Wireless Coil</td><td>Huizhou Mingda</td><td>$3</td></tr>
+                <tr><td>Aerospace Case</td><td>Bayer MaterialScience</td><td>$3</td></tr>
+                <tr class="total">
+                    <td>MANUFACTURING COST</td>
+                    <td>—</td>
+                    <td>$24</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="margin-box">
+        Retail Price: <b>$69.99</b> | Gross Margin: <b>$45.99 (66%)</b>
+    </div>
+
+    <!-- Final Pitch -->
+    <div class="cta-section">
+        <h2 style="color: var(--accent-gold);">5% Supporting Cancer Research</h2>
+        <p style="opacity: 0.7; margin-bottom: 50px;">Proudly partnering with St. Jude Children's Research Hospital.</p>
+        <button class="invest-btn">INVEST IN AETHER SHELL</button>
+    </div>
+
+</div>
+
+</body>
+</html>
