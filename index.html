@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER SHELL | Shark Tank Pitch</title>
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --accent-cyan: #00e5ff;
+            --accent-gold: #ffcc33;
+            --card-blue: #0a1929;
+            --grid-line: rgba(0, 229, 255, 0.07);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 50px 50px;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-cyan);
+        }
+
+        .logo-main {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 900;
+            letter-spacing: 15px;
+            background: linear-gradient(to bottom, #fff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+            margin: 0;
+        }
+
+        .tagline { font-size: 1.5rem; margin-top: 20px; }
+        .tagline span { color: #ff3e3e; font-weight: bold; }
+
+        /* DATA BLOCKS */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .data-card {
+            background: var(--card-blue);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 40px;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.1);
+        }
+
+        .data-card h3 { color: var(--accent-cyan); text-transform: uppercase; margin-top: 0; }
+        
+        .big-stat {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* TECH BREAKDOWN */
+        .tech-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tech-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--accent-cyan);
+        }
+
+        /* PROFIT TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--card-blue);
+        }
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+        }
+        th { color: var(--accent-cyan); text-transform: uppercase; font-size: 0.8rem; }
+        .total-row { background: rgba(0, 229, 255, 0.1); font-weight: bold; }
+
+        .gold-banner {
+            background: rgba(255, 204, 51, 0.1);
+            border: 1px solid var(--accent-gold);
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .cta-btn {
+            background: transparent;
+            color: var(--accent-cyan);
+            border: 2px solid var(--accent-cyan);
+            padding: 20px 60px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 40px var(--accent-cyan);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Hero Section based on Slide 1 -->
+    <section class="hero">
+        <h1 class="logo-main">AETHER</h1>
+        <h2 style="letter-spacing: 10px; color: var(--accent-cyan); margin-top: -10px;">SHELL</h2>
+        <p class="tagline">Your phone charges while you <span>walk, breathe,</span> and <span>exist.</span></p>
+    </section>
+
+    <!-- Problem Stats based on Slide 2 -->
+    <section>
+        <h2 style="color: var(--accent-cyan);">The Problem</h2>
+        <div class="data-grid">
+            <div class="data-card">
+                <span class="big-stat">90%</span>
+                <p>Percentage of teens reported to phone anxiety from low battery</p>
+            </div>
+            <div class="data-card">
+                <span class="big-stat">≈$16.65B</span>
+                <p>Portable charger market size in 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Specs based on Slide 10 -->
+    <section>
+        <h2 style="color: var(--accent-cyan);">How it Works</h2>
+        <div class="tech-list">
+            <div class="tech-item">
+                <b style="color: var(--accent-cyan);">Micro Rotors:</b> Small gears inside the case use the energy of your steps to spin and convert motion into electricity.
+            </div>
+            <div class="tech-item">
+                <b style="color: var(--accent-cyan);">Thermoelectric Layer:</b> The average body temperature (~98.6°F) helps create a small electric current to charge your phone.
+            </div>
+            <div class="tech-item">
+                <b style="color: var(--accent-cyan);">Smart Glass:</b> 32x48mm scratch resistant sapphire coat that shows the internal rotor system.
+            </div>
+        </div>
+    </section>
+
+    <!-- Financials based on Slide 11 & 12 -->
+    <section>
+        <h2 style="color: var(--accent-cyan);">Business Model</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Vendor</th>
+                    <th>Est. Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Micro Kinetic Rotor</td><td>Lixin Industry</td><td>$6</td></tr>
+                <tr><td>Cooling Tech</td><td>TEC Suppliers</td><td>$5</td></tr>
+                <tr><td>Wireless Charging Coil</td><td>Huizhou Mingda</td><td>$3</td></tr>
+                <tr><td>Aerospace Polycarbonate</td><td>Bayer MaterialScience</td><td>$3</td></tr>
+                <tr class="total-row">
+                    <td>TOTAL COST PER UNIT</td>
+                    <td>-</td>
+                    <td style="color: var(--accent-gold);">$24</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="gold-banner">
+            <p>Retail Price: <b>$69.99</b> | Gross Margin: <b>$45.99 per unit (66%)</b></p>
+        </div>
+    </section>
+
+    <!-- Purpose based on Slide 9 -->
+    <section style="text-align: center; margin-top: 100px;">
+        <h3 class="accent-gold" style="color: var(--accent-gold); font-size: 2rem;">5% of sales goes to Cancer Research</h3>
+        <p>Aether Shell donates 5% of every sale to St. Jude Children's Research Hospital.</p>
+        <button class="cta-btn">Invest in Aether Shell</button>
+    </section>
+</div>
+
+</body>
+</html>
